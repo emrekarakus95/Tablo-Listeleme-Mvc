@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+@Html.Partial("_header")
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar">Anasayfa</span>
+                    <span class="icon-bar">Hakkında</span>
+                    <span class="icon-bar">Kayıtlar</span>
+                </button>
+                @Html.ActionLink("Doküman", "Index", "Anasayfa", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Hakkında","Hakkında",new { area = ""}, new { @class = "navbar-brand" })
+                @Html.ActionLink("Yeni Kayıt","kayıtekle", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+       @RenderSection("scripts", false)
+
+    
+
+</body>
+</html>

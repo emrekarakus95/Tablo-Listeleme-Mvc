@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yazokuluModelStoreContainer" CdmEntityContainer="yazokuluEntities">
+    <EntitySetMapping Name="Sayfa1">
+      <EntityTypeMapping TypeName="yazokuluModel.Sayfa1">
+        <MappingFragment StoreEntitySet="Sayfa1">
+          <ScalarProperty Name="Akademik_Birim" ColumnName="Akademik Birim" />
+          <ScalarProperty Name="Dersin_Kodu" ColumnName="Dersin Kodu" />
+          <ScalarProperty Name="Dersin_Adı" ColumnName="Dersin Adı" />
+          <ScalarProperty Name="Teori" ColumnName="Teori" />
+          <ScalarProperty Name="Uygulama" ColumnName="Uygulama" />
+          <ScalarProperty Name="Kredi" ColumnName="Kredi" />
+          <ScalarProperty Name="AKTS" ColumnName="AKTS" />
+          <ScalarProperty Name="Bölümü" ColumnName="Bölümü" />
+          <ScalarProperty Name="Öğretim_Elemanı" ColumnName="Öğretim Elemanı" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="yazokuluModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sayfa1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="Akademik Birim" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Kodu" Type="nvarchar" MaxLength="255" />
+    <Property Name="Dersin Adı" Type="nvarchar" MaxLength="255" />
+    <Property Name="Teori" Type="float" />
+    <Property Name="Uygulama" Type="float" />
+    <Property Name="Kredi" Type="float" />
+    <Property Name="AKTS" Type="float" />
+    <Property Name="Bölümü" Type="nvarchar" MaxLength="255" />
+    <Property Name="Öğretim Elemanı" Type="nvarchar" MaxLength="255" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="yazokuluModelStoreContainer">
+    <EntitySet Name="Sayfa1" EntityType="Self.Sayfa1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

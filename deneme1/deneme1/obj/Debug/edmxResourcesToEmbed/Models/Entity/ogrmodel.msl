@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="yazokuluModel1StoreContainer" CdmEntityContainer="yazokuluEntities1">
+    <EntitySetMapping Name="ogrtbl">
+      <EntityTypeMapping TypeName="yazokuluModel1.ogrtbl">
+        <MappingFragment StoreEntitySet="ogrtbl">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ad" ColumnName="ad" />
+          <ScalarProperty Name="soyad" ColumnName="soyad" />
+          <ScalarProperty Name="ogrno" ColumnName="ogrno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

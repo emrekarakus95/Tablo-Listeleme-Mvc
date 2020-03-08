@@ -1,0 +1,53 @@
+﻿@using deneme1.Models.Entity
+@model List<ogrtbl>
+@{
+    ViewBag.Title = "index";
+   
+}
+
+<h2>Öğrenci Listeleme Alanına Hoşgeldiniz</h2>
+<table class="table table-bordered" id="anatablo">
+    <thead>
+      
+            <th>İd</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Öğrenci Numarası</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+    
+    </thead>
+
+
+    <tbody>
+        @foreach (var deger in  Model)
+        {
+            <tr>
+                <td>@deger.id</td>
+                <td>@deger.ad</td>
+                <td>@deger.soyad</td>
+                <td>@deger.ogrno</td>
+                <td><a class="btn btn-info" href="/anasayfa/güncelle/@deger.id">Güncelle</a></td>
+                <td><a class="btn btn-danger"  href="/anasayfa/sil/@deger.id">Sil</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a  class="btn btn-success" href="/anasayfa/kayıtekle">Kayıt Ekle</a>
+
+@section scripts
+{
+    <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#anatablo').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Turkish.json"
+                }
+            });
+        });
+    </script>
+
+}

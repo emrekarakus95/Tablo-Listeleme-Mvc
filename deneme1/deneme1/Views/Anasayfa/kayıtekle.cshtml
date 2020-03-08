@@ -1,0 +1,32 @@
+﻿@model deneme1.Models.Entity.ogrtbl
+@{
+    ViewBag.Title = "kayıtekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Kayıt Ekleme Alanı</h1>
+@using (Html.BeginForm("kayıtekle", "Anasayfa", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.ad)
+        @Html.TextBoxFor(m => m.ad, new { @class="form-control"})
+       
+        <br />
+        @Html.LabelFor(m=>m.soyad)
+        @Html.TextBoxFor(m=>m.soyad, new { @class = "form-control" })
+       
+        <br />
+        @Html.LabelFor(m=>m.ogrno)
+        @Html.TextBoxFor(m=>m.ogrno, new { @class = "form-control" })
+
+        <br />
+    </div>
+    @Html.HiddenFor(m=>m.id)
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+}
+@section scripts
+{
+    
+<script src="~/scripts/jquery.validate.min.js"></script>
+<script src="~/scripts/jquery.validate.unobtrusive.min.js"></script>
+  }
